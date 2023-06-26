@@ -41,7 +41,11 @@ Route::get('/estudiantes/registrar', [Estudiantes::class, 'form_registro_est']);
 Route::get('/estudiantes/borrar/{id}', [Estudiantes::class, 'borrar'])->name('eliminaEst');
 Route::POST('/estudiantes/registrar', [Estudiantes::class, 'registrar']);
 
-Route::get('/profesores/listado', [Profesores::class, 'index']);
+Route::get('/profesores/listado', [Profesores::class, 'index'])->name('listadoProf');
+Route::get('/profesores/registrar', [Profesores::class, 'form_registro_prof']);
+Route::get('/profesores/borrar/{id}', [Profesores::class, 'borrar'])->name('eliminaProf');
+Route::POST('/profesores/registrar', [Profesores::class, 'registrar']);
+
 
 Route::get('/regnotas/listado', [Calificaciones::class, 'index']);
 
